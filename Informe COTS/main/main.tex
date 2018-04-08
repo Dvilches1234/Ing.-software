@@ -1,0 +1,106 @@
+\documentclass{udpreport}
+
+\usepackage{biblatex}
+\addbibresource{sample.bib}
+\usepackage{hyperref}
+
+\renewcommand{\contentsname}{Contenidos}
+
+
+\title{Metodología Commercial Off-The-Shelf (COTS)I}
+\udpcourse{Ingeniería de Software}
+\author{Manuel Tobar\\Rocío Venegas\\Diego Vilches}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Introducción}
+
+    El aumento de nuevas tecnologías, ha provocado una creciente demanda de sistemas informáticos, desde juegos hasta sistemas globales utilizados por distintas naciones, para ello es importante elgir un método  adecuado para el desarrollo del software.\\\\
+	Utilizar la metodología correcta puede significar la diferencia entre el éxito y el fracaso de nuestro proyecto de software. Hoy en día existe una variedad de estas y para elegir correctamente, hay que conocer tanto las características de las metodologías existentes, como las del proyecto en cuestión.
+	\\\\
+	Entre las metodologías existentes, podemos encontrar la metodología \emph{COTS} (Commercial Off-The-Shelf), la cual consiste en el uso de sistemas ya disponibles en el mercado para la construcción de un proyecto de software. El hecho de que estas tecnologías ya existan en el retail, es lo que le da el nombre, ya que es como si se tomaran componentes desde el estante. Es esta metodología de la cual se hablará en este informe. Se profundizará en la manera en la que se aplica al desarrollo de un proyecto de software. También se explicarán sus ventajas y desventajas.
+	\\\\
+	Finalmente, se tratará la aplicación de la metodología \emph{COTS} al proyecto "Cachupín", aplicación que consiste en la ubicación de servicios relacionados con las mascotas (clínicas veterinarias, hoteles, tiendas de mascotas, etc), además de incluir un sistema de adopción.
+	
+	
+
+\chapter{Metodología}
+
+	\emph{COTS} o Componente sacado del estante (Commercial Off-The-Shelf) hace referencia a los tipos de aplicaciones de software que están diseñadas con la intención de cumplir una funcionalidad en específico. Estas aplicaciones, tienen la característica que pueden ser compradas en el mercado, estando así, a la disposición del público general. Por esta razón, la mayoría incluye características y funciones que lo hacen reutilizable. Ejemplo de esto, son los gestores de bases de datos y los antivirus.
+	\\\\
+	Actualmente, no es raro que los sistemas grandes permitan acceder a sus funciones mediante Interfaces de Programación de Aplicaciones (\emph{APIs}). Por este motivo, la creación de grandes sistemas, utilizando sistemas \emph{COTS} más pequeños debería siempre ser una opción, ya que al utilizarlos, se podrían reducir costes y tiempos, en comparación al desarrollo completo de un nuevo software.
+	\\\\
+	Si bien los sistemas \emph{COTS} son lo suficientemente flexibles como para permitir modificaciones, hacer demasiados cambios puede ser riesgoso, ya que después de un cierto punto el vendedor del software ya no podría seguir ofreciendo soporte o actualizaciones. Esto significa, que ahora la responsabilidad de mantener el software actualizado pasa a ser de quien compró y modificó el producto en vez del vendedor.
+	%Rell
+	\\\\
+	A continuación, se explicará la metodología \emph{COTS} y como implementaría en cada una de las etapas correspondientes al desarrollo de software.
+	\section{Especificación de requisitos}
+        Inicialmente, los requisitos son obtenidos de forma abstracta con el objetivo de definir el contexto en el que funcionará la aplicación, además de su funciones generales. Como resultado, se obtendrá una breve descripción de la funcionalidad del sistema. El objetivo de esto, es poder determinar de forma precisa los potenciales software \emph{COTS} a utilizar.\\\\
+        Para ello se agendan reuniones con personal clave para modelar las practicas de trabajos a través de diagramas de flujos.
+	\section{Análisis}
+	    Con la información obtenida de la etapa anterior, se identifican todos los sistemas que componen el software y se adaptan los diagramas de flujo en función de los posibles candidatos a componentes del software \emph{COTS} y se analiza la viabilidad con los requerimientos. \\\\
+	    Para la correcta integración de los componentes \emph{COTS} se definen múltiples software de apoyo.     
+	\newpage
+	\section{Diseño}
+	    En esta parte del desarrollo se seleccionan los componentes \emph{COTS} que se incorporarán en el producto final. También se analizan y prueban las funciones influyentes en el proyecto de los componentes \emph{COTS} para determinar capacidades y limitaciones. 
+	
+	\section{Implementación}
+	    Se construyen los elementos necesarios para la unión de los diferentes componentes \emph{COTS}, así mismo se codifican elementos que realicen las tareas requeridas por el sistema que no son entregadas por los componentes.
+	    
+	\section{Pruebas e Implantación}
+	   En la metodología \emph{COTS}, las fases de pruebas e implantación son estándar y no difieren mucho de otras metodologías. La primera, consistiría en someter al sistema a diversas situaciones en las que se podría encontrar, con el fin de hallar fallos a tiempo y repararlos. La única diferencia que tendría esta con otras metodologías, es que, en el caso de \emph{COTS}, se le podría dedicar más tiempo, ventaja que se explicará más adelante. Un detalle importante de la etapa de pruebas en la metodología \emph{COTS}es que las pruebas se centran en probar las uniones entre los complementos, ya que estos por si solos ya han sido probados.\\\\
+	   Una vez terminada la fase de pruebas, se procedería a instalar el software en los equipos del cliente. Esta etapa, vendría siendo la implantación del sistema.
+	\section{Mantención}
+	   La mantención puede ocurrir debido a la actualización de unos de los componentes \emph{COTS} , donde esta puede afectar el correcto funcionamiento teniendo que agregar o quitar funciones para que esta puede seguir con una correcta integración. Otro tipo de mantención es eliminar o añadir componentes \emph{COTS}.
+	
+\chapter{Ventajas y desventajas}
+
+Para ocupar de forma óptima la metodología \emph{COTS}, es necesario conocer, no sólo como funciona, si no también los atributos y las posibles dificultades que puede conllevar la utilización de este modelo. En las siguientes secciones, se explicarán las ventajas y desventajas de esta metodología
+    \section{Ventajas}
+	\begin{itemize}
+		\item \textbf{Tiempo de desarrollo:} como todos los componentes ya están programados y probados, el tiempo de desarrollo se ve disminuido. De esta manera, hay más tiempo para entender los requisitos, configurar el sistema completo y probarlo.
+		
+		\item \textbf{Fallas:} es esperable que un producto \emph{COTS} tenga menos defectos, debido a que este ha sido sometido, no solo a rigurosas pruebas, si no también, a la retroalimentación de otros usuarios del sistema. 
+		
+		\item \textbf{Costos:} como los costos asociados al producto están siendo pagados por todos los clientes, el precio para un cliente singular se ve reducido en comparación a los costos asociados a desarrollar y mantener un software.
+		
+		\item \textbf{Soporte y entrenamiento:} el vendedor del software proveerá entrenamiento para que los usuarios aprendan a utilizar el sistema. Es difícil lograr este nivel de servicio para software hecho a la medida. De forma similar, el soporte  puede ser entregado con mayor eficiencia.
+		
+	\end{itemize}
+	\section{Desventajas}
+	\begin{itemize}
+	\item \textbf{Funcionalidad:} al ocupar un producto \emph{COTS}, es posible que las funcionalidades de este fallen o tengan un rendimiento pobre dada una situación específica. También es posible, que el sistema tenga funcionalidades que son irrelevantes para el proyecto. La existencia de estas, podría obligar a trabajar en una forma no óptima. Esta clase de problemas, no es responsabilidad del vendedor del software, por lo que recae en manos del desarrollador solucionarlos.
+	
+	\item \textbf{Incompatibilidad con otros sistemas \emph{COTS}:} es posible que sea difícil que varios productos \emph{COTS} puedan operar en conjunto, ya que, inicialmente cada producto tiene una forma esperada de uso. Arreglar este tipo de problemas, podría resultar en aumentar considerablemente la cantidad de trabajo.
+	
+	\item \textbf{Control sobre la evolución del sistema:} los cambios hechos en el productos son decididos por los vendedores. Estos cambios pueden producir inconvenientes como incompatibilidad con versiones anteriores, funcionalidades nuevas no deseadas y en algunos casos, la carencia de soporte de versiones previas. 
+	
+	\item \textbf{Soporte de los vendedores:} si bien, los vendedores pueden ofrecer soporte cuando surgen problemas, los cambios en el mercado pueden ser una dificultad. Por ejemplo, si un producto tiene una escasa demanda, el vendedor puede decidir dejar de venderlo, lo que conllevaría al final de su soporte. 
+	\end{itemize}
+
+\chapter{Aplicación a Cachupín}
+
+Uno de las principales necesidades para aplicar la metodología \emph{COTS} a Cachupín es identificar los diferentes subsistemas que componen la aplicación. Entre ellos se encuentran algunos subsistemas donde es viable añadir un componente ya existente en el mercado.
+
+Los subsistemas en los que se puede añadir un componente \emph{COTS} son:
+\begin{itemize}
+    \item \textbf{Gestor de mapas:} Para lograr el funcionamiento de la búsqueda de veterinarias, tiendas de mascotas, hoteles, estilistas y entrenadores, es necesario poder visualizar estos servicios en un mapa.\\
+    Los posibles componentes candidatos pueden ser: Google Maps, Microsoft Bing Maps, OpenLayers.
+    
+    \item \textbf{Gestor de búsqueda:} La funcionalidades de búsqueda de campañas y adopción de animales requieren de un motor de búsqueda eficaz y rápido, para ello es conveniente evaluar uno ya existente en el mercado que cumpla con esas funcionalidades.\\
+    Los componentes que podrían cumplir con estos requerimientos son: Google Custom Search, Algolia, Site Search.
+    
+    \item \textbf{Gestor de base datos:} La aplicación necesita guardar la información de alguna manera. Para esto, se puede recurrir a uno de los tantos gestores de bases de datos existentes en el mercado.\\
+    Los candidatos son: Oracle Database, PostgreSQL, MySQL.
+\end{itemize}
+
+\chapter{Conclusión}
+
+En conclusión, \emph{COTS} se refiere a cada una de las distintas piezas de software que, estando disponibles en el mercado, se unen entre si para armar un producto mas completo y complejo, optimizando el tiempo y costo de desarrollo. El hecho de que esto componentes, estén a la venta y al alcance de cualquier comprador, es lo que determine sus ventajas y desventajas 
+\\\\
+Se puede aplicar la metodología \emph{COTS} a casos de proyectos donde se requieren funcionalidad complejas o costosas de implementar, por lo que se decide utilizar algún componente en el mercado. Esto es visible y aplicable en el caso de las \emph{Start-Ups} donde no tienen el personal ni los fondos como para implementar, por ejemplo, un gestor de mapas o de base de datos. 
+
+\nocite{*}
+\printbibliography[title=Bibliografía]
+\end{document}
